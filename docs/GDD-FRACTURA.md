@@ -165,3 +165,11 @@ Archivo: `game/index.html` (un solo archivo, Three.js por CDN).
 - Salto, Salto de Odín (campanas mágicas), aterrizaje según la fuerza de la caída, grietas y derrumbe de baldosas cercanas.
 - Viento que aumenta al caer, dron grave de ambiente, tambores de guerra en la cuenta regresiva, cuerno al empezar y al ganar.
 - Tecla `M` para silenciar.
+
+## 9. v4 — Más dificultad
+| Parámetro | Antes | Ahora |
+|---|---|---|
+| Tamaño de baldosa (radio) | 1,0 m | **0,6 m** |
+| Baldosas por reino | 271 | **721** |
+| Reinos | 4 | **5**: Asgard → Álfheim → Midgard → Svartálfheim → Hel |
+| Zona de pisada (hitbox de pies) | 0,24 m | **0,12 m**: ya no te sostiene una baldosa que solo rozas |
