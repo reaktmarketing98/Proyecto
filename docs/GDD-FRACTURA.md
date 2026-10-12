@@ -35,7 +35,7 @@ Minijuego de Minecraft popularizado por Hypixel (dentro de "TNT Games").
 
 ## 2. Nuestro concepto: FRACTURA
 
-> Plataformas de piedra flotando sobre un cañón. Cada baldosa que pisas se agrieta y se desploma. Último en pie gana.
+> Plataformas de piedra suspendidas en un vacío negro total. Juegas en **primera persona**. Cada baldosa que pisas se agrieta y se hunde en la oscuridad. Los pisos de abajo **no se ven**: solo aparecen cuando cae una baldosa y la luz atraviesa el hueco. Último en pie gana.
 
 ### Qué conservamos (la base)
 - Baldosas que caen tras pisarlas (con retardo corto).
@@ -49,7 +49,8 @@ Minijuego de Minecraft popularizado por Hypixel (dentro de "TNT Games").
 |---|---|
 | Bloques cúbicos pixelados | **Baldosas hexagonales** de piedra con textura, sombras y reflejos (PBR) |
 | Arena/grava + TNT | Piedra que **se agrieta, se pone incandescente y se desploma** girando, con polvo |
-| Mundo Minecraft | **Cañón al atardecer**, columnas de roca, niebla |
+| Mundo Minecraft | **Vacío negro total**, solo motas flotando; los pisos inferiores ocultos en la oscuridad |
+| Cámara 3ª persona | **Primera persona** (tensión: no ves lo que hay debajo) |
 | Personajes Steve/skins | Corredores estilizados con traje y visor de color |
 | Pociones/tienda | **Núcleos de energía**: orbes que aparecen sobre baldosas y dan +1 doble salto (máx. 3) |
 | Chat/scoreboard de servidor | **HUD propio**: vivos + tiempo, indicador de nivel, cargas de doble salto, feed de eventos |
@@ -67,14 +68,14 @@ Minijuego de Minecraft popularizado por Hypixel (dentro de "TNT Games").
 | Jugadores | 1 humano + 7 bots |
 | Niveles | 4 (separados 7 m) |
 | Baldosas por nivel | 271 (hexágono de 9 anillos) |
-| Retardo de caída | 0,42 s (cambia de color: piedra → naranja → cae) |
+| Retardo de caída | 0,8 s (la costura del borde se enciende naranja → tiembla → cae) |
 | Doble salto | 2 al inicio, máx. 3 |
 | Núcleo | Aparece cada ~6 s, +1 doble salto |
 | Cuenta regresiva | 3 s (las baldosas no caen) |
 | Eliminación | Caer por debajo del nivel 4 |
 
 **Controles**
-- PC: `WASD` mover · `Espacio` saltar / doble salto en el aire · ratón (clic para capturar) cámara.
+- PC: `WASD` mover · `Espacio` saltar / doble salto en el aire · ratón (clic para capturar) o flechas para mirar.
 - Móvil: joystick izquierdo · arrastrar a la derecha para cámara · botón de salto.
 
 ---
@@ -107,7 +108,10 @@ Archivo: `game/index.html` (un solo archivo, Three.js por CDN).
 **Qué tiene**
 - Física propia (gravedad, salto, doble salto, aterrizaje por nivel).
 - 1.084 baldosas instanciadas (rendimiento fluido).
-- Sombras, iluminación PBR, mapa de entorno, niebla, partículas de polvo.
+- Primera persona con balanceo de cabeza y FOV dinámico al caer.
+- Luz cenital por piso: solo el piso actual está iluminado; los inferiores reciben luz únicamente por los huecos (sombras reales).
+- Costuras luminosas con bloom, polvo, motas en el vacío, fundido a negro al caer.
+- Sonido sintetizado (grietas, saltos, aterrizajes, núcleos).
 - 7 bots con IA: buscan baldosas sanas, saltan huecos, usan doble salto para salvarse y persiguen núcleos.
 
 ---
