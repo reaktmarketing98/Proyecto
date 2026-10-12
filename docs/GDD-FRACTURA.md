@@ -137,3 +137,31 @@ Archivo: `game/index.html` (un solo archivo, Three.js por CDN).
 ## 7. Riesgos y cuidados legales
 - No usar nombre "TNT Run", texturas, sonidos ni assets de Minecraft/Mojang/Hypixel.
 - La mecánica (suelo que cae) no es protegible; el arte y la marca sí → todo el arte debe ser propio.
+
+---
+
+## 8. v3 — Ambientación nórdica y movimiento natural
+
+**Mitología**: la arena flota en **Ginnungagap** (el abismo primordial). Los 4 niveles son reinos: **Asgard → Midgard → Svartálfheim → Hel**. Ganar = **Valhalla**.
+
+| Elemento | Implementación |
+|---|---|
+| Baldosas | Piedra con **runa del Futhark antiguo** tallada; brilla azul hielo en reposo y **arde naranja** al pisarla |
+| Personajes | Guerreros vikingos: casco con protector nasal (algunos con cuernos), barba, manto de piel, túnica del clan, cinturón, brazales, botas, **escudo pintado** a la espalda y hacha al cinto |
+| Clanes | 8 colores de túnica/escudo; broche luminoso del clan |
+| Ambiente | Vacío negro, nieve cayendo, **piedras rúnicas flotando**, **braseros con fuego** y brasas, aurora boreal tenue en lo alto |
+| Potenciador | **Runa de Odín** (ᛟ): +1 Salto de Odín |
+| UI | Tipografía Cinzel, marcos de hierro con remaches dorados, runas en el HUD |
+
+**Primera persona con cuerpo**: la cámara va en los ojos del guerrero; al mirar abajo ves pecho, brazos, hacha, piernas y botas. El cuerpo se anima (zancada con rodillas, brazos, inclinación al correr, pose en el aire).
+
+**Movimiento natural**
+- Aceleración y frenado con inercia (no instantáneo); menos control en el aire.
+- Margen de salto al dejar un borde (0,12 s) y salto guardado si pulsas justo antes de aterrizar.
+- Cámara: rebote real de la cabeza, balanceo lateral, inclinación al desplazarte de lado, amortiguación al aterrizar y FOV que se abre al correr/caer.
+
+**Sonido (sintetizado, sin archivos)**
+- Pasos sincronizados con cada pisada (alternando izquierda/derecha); pasos de bots cercanos con posición estéreo.
+- Salto, Salto de Odín (campanas mágicas), aterrizaje según la fuerza de la caída, grietas y derrumbe de baldosas cercanas.
+- Viento que aumenta al caer, dron grave de ambiente, tambores de guerra en la cuenta regresiva, cuerno al empezar y al ganar.
+- Tecla `M` para silenciar.
