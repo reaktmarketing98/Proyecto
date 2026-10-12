@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>FRACTURA</title>
+<title>Fractura Prototipo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -18,6 +18,9 @@
     --energy: #3fe0ff;
     --danger: #ff3b4e;
   }
+  /* El juego siempre usa tema oscuro */
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0b0d12; --text: #f2efe9; } }
+  :root[data-theme="dark"] { --bg: #0b0d12; --text: #f2efe9; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg); color: var(--text);
     font-family: Inter, system-ui, sans-serif; -webkit-user-select: none; user-select: none; touch-action: none; }
