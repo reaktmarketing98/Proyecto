@@ -1,0 +1,14 @@
+{
+  "name": "tumble-tiles",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tumble Tiles: juego de baldosas que caen con multijugador",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
