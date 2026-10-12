@@ -13,7 +13,7 @@ const MAX_MSG = 8192;
 const ROOM_RE = /^[a-z0-9][a-z0-9_.-]{0,47}$/;
 
 const server = http.createServer((req, res) => {
-  if (req.url === '/health') { res.writeHead(200); return res.end('ok'); }
+  if (req.url === '/health' || req.url === '/healthz') { res.writeHead(200); return res.end('ok'); }
   if (req.url === '/' || req.url.startsWith('/?') || req.url === '/index.html') {
     return fs.readFile(GAME, (err, data) => {
       if (err) { res.writeHead(500); return res.end('error'); }
